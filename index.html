@@ -30,9 +30,192 @@
     />
     <!-- Font Awesome CDN -->
   </head>
-  <body>
-    <header></header>
-    <main></main>
+  <body class="bg-white">
+    <header class="container md:max-w-screen-xl mx-auto relative">
+      <!-- Navbar starts here -->
+      <section class="font-raleway mt-4">
+        <div class="navbar bg-base-100">
+          <div class="navbar-start">
+            <div class="dropdown">
+              <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h8m-8 6h16"
+                  />
+                </svg>
+              </div>
+              <ul
+                tabindex="0"
+                class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              >
+                <li><a>Home</a></li>
+                <li><a>About</a></li>
+                <li><a>Destination</a></li>
+                <li><a>Search</a></li>
+              </ul>
+            </div>
+            <a
+              class="btn btn-ghost md:text-3xl text-2xl md:font-extrabold font-bold"
+              >P-Ticket</a
+            >
+          </div>
+          <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1 space-x-6">
+              <li><a>Home</a></li>
+              <li><a>About</a></li>
+              <li><a>Destination</a></li>
+              <li><a>Search</a></li>
+            </ul>
+          </div>
+          <div class="navbar-end">
+            <button
+              class="btn text-[#1DD100] bg-[#1DD1001A] border-1 border-[#1DD10066] hover:bg-transparent"
+            >
+              Bus <img src="./images/bus-icon.png" alt="" />
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- Navbar ends here -->
+
+      <!-- hero Section starts here -->
+      <section
+        class="container mx-auto max-w-screen-xl mt-4 md:mt-8 bg-[url('./images/banner.png')] md:h-[600px] bg-cover bg-center bg-no-repeat flex flex-col items-center justify-center rounded-xl py-5 md:py-0 md:mb-32 mb-10 relative"
+      >
+        <h1
+          class="text-3xl md:text-6xl font-extrabold text-center text-white font-raleway leading-10 md:leading-[86px]"
+        >
+          End-to-End Travel with <br />
+          <span class="text-[#1DD100]">P Paribahan</span>
+        </h1>
+        <p class="text-white text-center font-inter md:w-2/4 md:pb-5">
+          Yes, you can run unit tests and view the results directly within the
+          app. The integrated testing features allow for a streamlined .
+        </p>
+        <button
+          class="btn font-raleway bg-[#1DD100] border-none outline-none font-bold text-[#030712] md:mt-4 my-6 md:my-0"
+        >
+          Buy Tickets
+        </button>
+      </section>
+      <!-- hero Section ends here -->
+      <section
+        class="container mx-auto max-w-screen-xl absolute md:-bottom-12 mt-8 md:mt-0"
+      >
+        <div
+          class="flex md:flex-row flex-col md:justify-evenly gap-[90px] md:gap-0"
+        >
+          <div
+            class="bg-white rounded-xl md:w-[270px] w-[98%] flex justify-center items-center gap-4 py-5 border-b-[3px] border-b-[#1DD100] shadow-lg"
+          >
+            <div>
+              <img src="./images/people.png" alt="" />
+            </div>
+            <div>
+              <h1 class="text-3xl font-bold font-inter text-[#030712]">
+                500K+
+              </h1>
+              <p class="text-[#03071299]font-inter">Registered users</p>
+            </div>
+          </div>
+          <div
+            class="bg-white rounded-xl md:w-[270px] w-[98%] flex justify-center items-center gap-4 py-5 border-b-[3px] border-b-[#1DD100] shadow-lg"
+          >
+            <div>
+              <img src="./images/ticket-cupon.png" alt="" />
+            </div>
+            <div>
+              <h1 class="text-3xl font-bold font-inter text-[#030712]">
+                1.7 lacks
+              </h1>
+              <p class="text-[#03071299]font-inter">Tickets sold</p>
+            </div>
+          </div>
+          <div
+            class="bg-white rounded-xl md:w-[270px] flex justify-center items-center w-[98%] gap-4 py-5 border-b-[3px] border-b-[#1DD100] shadow-lg"
+          >
+            <div>
+              <img src="./images/stoppage.png" alt="" />
+            </div>
+            <div>
+              <h1 class="text-3xl font-bold font-inter text-[#030712]">80K+</h1>
+              <p class="text-[#03071299]font-inter">Rental partners</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+    <main>
+      <!-- Coupons starts here -->
+      <section class="container mx-auto max-w-screen-xl md:mb-24 mt-[160%] md:mt-0">
+        <h1
+          class="text-[#030712] text-center text-4xl font-bold font-raleway pb-6 md:pb-12"
+        >
+          Best offers for you
+        </h1>
+        <div class="flex md:flex-row flex-col  gap-10 md:gap-0 md:justify-evenly">
+          <div
+            class="bg-[#FFBF0F] md:w-[550px] rounded-2xl flex justify-evenly items-center md:px-0 px-4"
+          >
+            <div class="font-inter">
+              <h1 class="font-inter md:text-4xl text-2xl font-extrabold text-[#030712CC]">
+                15% OFF
+              </h1>
+              <p class="text-xl font-inter font-semibold text-[#030712CC] py-2">
+                on your next purchase
+              </p>
+              <p class="font-medium font-inter text-[#03071280]">
+                use by January 2024
+              </p>
+            </div>
+            <div>
+              <img src="./images/cupon-devider.png" alt="" class="h-[180px]" />
+            </div>
+            <div class="font-raleway">
+              <h1 class="text-[#030712] font-raleway text-2xl font-bold pb-2">
+                NEW15
+              </h1>
+              <p class="text-[#03071266]">Coupon Code</p>
+            </div>
+          </div>
+          <div
+            class="bg-[#F78C9C] md:w-[550px] rounded-2xl flex justify-evenly items-center px-4 md:px-0"
+          >
+            <div class="font-inter">
+              <h1 class="font-inter text-2xl md:text-4xl font-extrabold text-[#030712CC]">
+                20% OFF
+              </h1>
+              <p class="text-xl font-inter font-semibold text-[#030712CC] py-2">
+                on your next purchase
+              </p>
+              <p class="font-medium font-inter text-[#03071280]">
+                use by January 2024
+              </p>
+            </div>
+            <div>
+              <img src="./images/cupon-devider.png" alt="" class="h-[180px]" />
+            </div>
+            <div class="font-raleway">
+              <h1 class="text-[#030712] font-raleway text-2xl font-bold pb-2">
+                Couple 20
+              </h1>
+              <p class="text-[#03071266]">Coupon Code</p>
+            </div>
+          </div>
+        </div>
+        <button class="btn btn-outline border-[#1DD100] text-[#1DD100] text-sm hover:border-none duration-300 hover: font-bold mt-14 block mx-auto px-6">See All Offers</button>
+      </section>
+      <!-- Coupons ends here -->
+    </main>
     <footer></footer>
     <!-- Javascript Files -->
     <script src="./scripts/script.js"></script>
