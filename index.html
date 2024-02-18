@@ -37,7 +37,7 @@
     <!-- Font Awesome CDN -->
   </head>
   <body class="bg-white">
-    <header class="container md:max-w-screen-xl mx-auto relative"">
+    <header class="container md:max-w-screen-xl mx-auto relative" id="header-id">
       <!-- Navbar starts here -->
       <section class="font-raleway mt-4">
         <div class="navbar bg-base-100">
@@ -160,7 +160,7 @@
         </div>
       </section>
     </header>
-    <main class="">
+    <main class="" id="main-id">
       <!-- Coupons starts here -->
       <section
         class="container mx-auto max-w-screen-xl md:mb-24 mt-[160%] md:mt-0" id="coupon"
@@ -385,7 +385,7 @@
 
             <!-- Driver -->
             <!-- Seats -->
-            <div class="">
+            <div class="all-seats">
               <div class="my-4 flex justify-between items-center">
                 <p class="font-medium text-[#03071280] font-inter">A</p>
                 <button
@@ -667,18 +667,21 @@
                     <li>Total Price:</li>
                     <li class="mr-[10px]"><span id="total-price">0</span></li>
                   </ul>
+                  <ul id="discount-price" class="flex justify-between text-[#030712] font-medium font-inter text-sm my-2">
+                    
+                  </ul>
                 </div>
                 <!-- Total Price -->
                 <!-- Input -->
-                <div class="py-4 relative font-inter">
-                  <input
+                <div class="py-4 relative font-inter coupon-input-class">
+                  <input id="coupon-input"
                     type="text"
                     placeholder="Have any coupon?"
                     class="input input-bordered w-[85%] h-[56px] mx-8 placeholder:text-[#03071266]"
                   />
                   <button
-                    class="text-white py-2 px-4 font-semibold rounded-lg bg-[#1DD100] hover:scale-95 duration-300 absolute bottom-6 right-12"
-                  >
+                    class="text-white py-2 px-4 font-semibold rounded-lg bg-[#1DD100] hover:scale-95 duration-300 absolute bottom-6 right-12 cursor-pointer"
+                    id="apply-coupon-btn">
                     Apply
                   </button>
                 </div>
@@ -705,7 +708,7 @@
                   >Passenger Name*</label
                 >
                 <input
-                  required
+                  
                   type="text"
                   placeholder="Enter your name"
                   class="input input-bordered w-full my-3 h-[60px]"
@@ -718,10 +721,10 @@
                   >Phone Number*</label
                 >
                 <input
-                  required
+                  
                   type="number"
                   placeholder="Enter your phone number"
-                  class="input input-bordered w-full my-3 h-[60px]"
+                  class="input input-bordered w-full my-3 h-[60px]" id="phn-number"
                 />
               </div>
               <div>
@@ -738,7 +741,7 @@
               </div>
               <button
                 class="text-white py-4 px-4 font-semibold rounded-lg bg-[#1DD100] hover:scale-95 duration-300 w-full my-3"
-              >
+              id="next-btn">
                 Next
               </button>
             </form>
@@ -756,7 +759,7 @@
         <!-- Seat section -->
       </section>
     </main>
-    <footer class="bg-[#030712]"">
+    <footer class="bg-[#030712]" id="footer-id">
       <section class="container mx-auto max-w-screen-xl">
         <!-- Upper -->
         <div
@@ -797,7 +800,7 @@
       </section>
     </footer>
     <!-- Modal -->
-    <section class="bg-[#F2F1F1] font-roboto relative min-h-screen flex justify-center items-center hidden">
+    <section class="bg-[#F2F1F1] font-roboto relative min-h-screen flex justify-center items-center hidden" id="modal">
       <div class="bg-white w-[718px] h-[481px] rounded-xl flex justify-center items-center">
         <div class="flex flex-col justify-center items-center">
           <img src="./images/success.png" alt="" />
