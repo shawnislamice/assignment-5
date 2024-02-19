@@ -102,19 +102,29 @@ for (let i = 0; i < buttons.length; i++) {
           }
         });
     }
-    let phoneNumber = document.getElementById("phn-number");
-    
-    phoneNumber.addEventListener('input',function(){
-      let phoneNumberValue=phoneNumber.value
-      if(buttonCount>=1 || phoneNumberValue.length>0){
-        document.getElementById("next-btn").removeAttribute("disabled");
-        document.getElementById("next-btn").style.backgroundColor = "#1DD100";
-      }
-    })
   });
 }
-let phoneNumber = document.getElementById("phn-number").value;
-console.log(phoneNumber.length)
+let phoneNumber = document.getElementById("phn-number");
+phoneNumber.addEventListener("input", function () {
+  let phoneNumberValue = phoneNumber.value;
+  console.log(phoneNumberValue.length);
+  if (buttonCount >= 1 && phoneNumberValue.length > 0) {
+    document.getElementById("next-btn").removeAttribute("disabled");
+    document.getElementById("next-btn").style.backgroundColor = "#1DD100";
+  }
+});
+
+for (let button of buttons) {
+  button.addEventListener("click", function () {
+    let phoneNumber = document.getElementById("phn-number").value;
+    console.log(phoneNumber)
+    if(phoneNumber.length>0){
+      document.getElementById('next-btn').removeAttribute('disabled')
+      document.getElementById('next-btn').style.backgroundColor = "#1DD100"
+    }
+  });
+}
+console.log(buttonCount);
 // Utility functions
 
 function set_innertext(elementId, value) {
@@ -152,14 +162,12 @@ function show_element(elementId) {
   element.classList.remove("hidden");
 }
 
-
-function phone_number_length(){
-  let phoneNumber = document.getElementById("phn-number")
-  phoneNumber.addEventListener('keyup',function(){
+function phone_number_length() {
+  let phoneNumber = document.getElementById("phn-number");
+  phoneNumber.addEventListener("keyup", function () {
     let phoneNumberValue = phoneNumber.value;
-    let phone_number_trim=phoneNumberValue.split('').join('')
-    let c=phone_number_trim.length
-    return c
-  })
-  
+    let phone_number_trim = phoneNumberValue.split("").join("");
+    let c = phone_number_trim.length;
+    return c;
+  });
 }

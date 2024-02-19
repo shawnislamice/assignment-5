@@ -3,23 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Activate Button 2</title>
 </head>
 <body>
-    <input type="number" id="myInput">
-    <button>Click</button>
+    <!-- First div containing two buttons -->
+    <div id="button-container">
+        <button id="button1">Button 1</button>
+        <button id="button2" disabled>Button 2</button>
+    </div>
+
+    <!-- Second div containing the input field -->
+    <div id="input-container">
+        <input type="text" id="inputField" placeholder="Enter your text here">
+    </div>
+
     <script>
-        // Select the input field
-        const inputField = document.getElementById('myInput');
+        // Get references to the elements
+        const button1 = document.getElementById('button1');
+        const button2 = document.getElementById('button2');
+        const inputField = document.getElementById('inputField');
 
-        // Add an event listener to the input field to listen for changes
-        inputField.addEventListener('input', function() {
-            // Retrieve the current value of the input field
-            const inputValue = inputField.value;
+        // Flag to track if Button 1 is clicked
+        let button1Clicked = false;
 
-            // Log the current value to the console
-            console.log('Input value:', inputValue);
+        // Event listener for Button 1 click
+        button1.addEventListener('click', function() {
+            button1Clicked = true;
+            checkActivation();
         });
+
+        // Event listener for input field change
+        inputField.addEventListener('input', function() {
+            checkActivation();
+        });
+
+        // Function to check if Button 2 should be activated
+        function checkActivation() {
+            // Check if Button 1 is clicked and input field is not empty
+            if (button1Clicked && inputField.value.trim() !== '') {
+                button2.removeAttribute('disabled');
+            } else {
+                button2.setAttribute('disabled', 'disabled');
+            }
+        }
     </script>
 </body>
 </html>
