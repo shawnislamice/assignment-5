@@ -36,8 +36,11 @@
     />
     <!-- Font Awesome CDN -->
   </head>
-  <body class="bg-white">
-    <header class="container md:max-w-screen-xl mx-auto relative" id="header-id">
+  <body class="bg-white ">
+    <header
+      class="container md:max-w-screen-xl mx-auto relative "
+      id="header-id"
+    >
       <!-- Navbar starts here -->
       <section class="font-raleway mt-4">
         <div class="navbar bg-base-100">
@@ -104,12 +107,12 @@
           <span class="text-[#1DD100]">P Paribahan</span>
         </h1>
         <p class="text-white text-center font-inter md:w-2/4 md:pb-5">
-          Yes, you can run unit tests and view the results directly within the
-          app. The integrated testing features allow for a streamlined .
+          Welcome to our smart ticketing system! We aim to revolutionize the way you purchase and manage your tickets for various events, transportation, and entertainment.
         </p>
         <button
           class="btn font-raleway bg-[#1DD100] border-none outline-none font-bold text-[#030712] md:mt-4 my-6 md:my-0"
-        id="btn-buy-tickets">
+          id="btn-buy-tickets"
+        >
           Buy Tickets
         </button>
       </section>
@@ -163,7 +166,8 @@
     <main class="" id="main-id">
       <!-- Coupons starts here -->
       <section
-        class="container mx-auto max-w-screen-xl md:mb-24 mt-[160%] md:mt-0" id="coupon"
+        class="container mx-auto max-w-screen-xl md:mb-24 mt-[160%] md:mt-0"
+        id="coupon"
       >
         <h1
           class="text-[#030712] text-center text-4xl font-bold font-raleway pb-6 md:pb-12"
@@ -234,7 +238,8 @@
       </section>
       <!-- Coupons ends here -->
       <section
-        class="bg-[#F7F8F8] border-t-2 border-[#1DD100] rounded-t-2xl md:rounded-t-[88px] my-8 md:my-0 pb-20" id="ticket-sale"
+        class="bg-[#F7F8F8] border-t-2 border-[#1DD100] rounded-t-2xl md:rounded-t-[88px] my-8 md:my-0 pb-20"
+        id="ticket-sale"
       >
         <div class="container mx-auto max-w-screen-xl">
           <!-- Title -->
@@ -247,8 +252,7 @@
             <p
               class="text-[#03071299] text-center md:w-2/4 mx-auto md:pb-12 pb-6 font-inter"
             >
-              Yes, you can run unit tests and view the results directly within
-              the app. The integrated testing features allow for a streamlined .
+              Find and purchase tickets for concerts, sports events, theater shows, and more.
             </p>
           </div>
           <!-- Title -->
@@ -281,7 +285,9 @@
                     <p
                       class="flex items-center gap-2 text-[#1DD100] font-inter font-medium bg-[#1DD10026] w-[180px] justify-center rounded-lg py-2"
                     >
-                      <img src="./images/seat-green.png" alt="" /><span id="seat-count">40</span
+                      <img src="./images/seat-green.png" alt="" /><span
+                        id="seat-count"
+                        >40</span
                       >Seats left
                     </p>
                   </div>
@@ -331,7 +337,7 @@
               <div class="flex flex-col justify-center items-center">
                 <img src="./images/fare.png" alt="" />
                 <h1 class="font-raleway text-2xl md:text-3xl font-bold pt-4">
-                  <span id="ticket-price" >550</span> Taka
+                  <span id="ticket-price">550</span> Taka
                 </h1>
                 <p
                   class="font-raleway md:text-2xl text-[#03071299] font-semibold pt-2"
@@ -348,7 +354,7 @@
           class="mt-6 bg-white rounded-3xl container mx-auto max-w-screen-xl flex justify-around pt-5 flex-col md:flex-row"
         >
           <!-- Seats -->
-          <div class="md:w-[48%]">
+          <div class="md:w-[48%] w-[95%]">
             <!-- title -->
             <div>
               <p class="text-[#030712] text-2xl font-raleway font-semibold">
@@ -374,12 +380,15 @@
             <!-- Driver -->
             <hr class="border-dashed my-4" />
             <div class="flex justify-end">
-              <button class="btn bg-[#0307121A] px-10 border-none outline-none" disabled>
+              <button
+                class="btn bg-[#0307121A] px-10 border-none outline-none"
+                disabled
+              >
                 <img
                   aria-colcount="size-8"
                   src="./images/tabler-icon-steering-wheel.png"
                   alt=""
-                /> 
+                />
               </button>
             </div>
 
@@ -621,12 +630,12 @@
           </div>
           <!-- Seats -->
           <!-- Line -->
-          <div class="md:w-[]">
+          <div class="md:block hidden">
             <img class="h-[800px]" src="./images/Line1.png" alt="" />
           </div>
           <!-- Line -->
           <!-- Info -->
-          <div class="w-[35%]">
+          <div class="md:w-[35%] md:mt-0 mt-6">
             <!-- title -->
             <div>
               <p class="text-[#030712] text-2xl font-raleway font-semibold">
@@ -642,8 +651,15 @@
                   <!-- head -->
                   <thead>
                     <tr class="">
-                      <th class="font-inter text-[#030712] font-medium seat-count-increment">
-                        Seat <span class="bg-[#1DD100] px-2 rounded-lg text-white" id="increment-seat-count">0</span>
+                      <th
+                        class="font-inter text-[#030712] font-medium seat-count-increment"
+                      >
+                        Seat
+                        <span
+                          class="bg-[#1DD100] px-2 rounded-lg text-white"
+                          id="increment-seat-count"
+                          >0</span
+                        >
                       </th>
                       <th class="font-inter text-[#030712] font-medium">
                         Class
@@ -654,7 +670,6 @@
                     </tr>
                   </thead>
                   <tbody id="ticket-body">
-                    
                     <!-- row 3 -->
                   </tbody>
                 </table>
@@ -667,21 +682,24 @@
                     <li>Total Price:</li>
                     <li class="mr-[10px]"><span id="total-price">0</span></li>
                   </ul>
-                  <ul id="discount-price" class="flex justify-between text-[#030712] font-medium font-inter text-sm my-2">
-                    
-                  </ul>
+                  <ul
+                    id="discount-price"
+                    class="flex justify-between text-[#030712] font-medium font-inter text-sm my-2"
+                  ></ul>
                 </div>
                 <!-- Total Price -->
                 <!-- Input -->
                 <div class="py-4 relative font-inter coupon-input-class">
-                  <input id="coupon-input"
+                  <input
+                    id="coupon-input"
                     type="text"
                     placeholder="Have any coupon?"
                     class="input input-bordered w-[85%] h-[56px] mx-8 placeholder:text-[#03071266]"
                   />
                   <button
-                    class="text-white py-2 px-4 font-semibold rounded-lg bg-[#1DD100] hover:scale-95 duration-300 absolute bottom-6 right-12 cursor-pointer"
-                    id="apply-coupon-btn">
+                    class="text-white py-2 px-4 font-semibold rounded-lg bg-gray-300 hover:scale-95 duration-300 absolute bottom-6 right-12 cursor-pointer"
+                    id="apply-coupon-btn"
+                  >
                     Apply
                   </button>
                 </div>
@@ -708,7 +726,6 @@
                   >Passenger Name*</label
                 >
                 <input
-                  
                   type="text"
                   placeholder="Enter your name"
                   class="input input-bordered w-full my-3 h-[60px]"
@@ -721,10 +738,10 @@
                   >Phone Number*</label
                 >
                 <input
-                  
                   type="number"
                   placeholder="Enter your phone number"
-                  class="input input-bordered w-full my-3 h-[60px]" id="phn-number"
+                  class="input input-bordered w-full my-3 h-[60px]"
+                  id="phn-number"
                 />
               </div>
               <div>
@@ -740,10 +757,44 @@
                 />
               </div>
               <button
-                class="text-white py-4 px-4 font-semibold rounded-lg bg-[#1DD100] hover:scale-95 duration-300 w-full my-3"
-              id="next-btn">
+                class="text-white py-4 px-4 font-semibold rounded-lg bg-gray-300  hover:scale-95 duration-300 w-full my-3"
+                id="next-btn"
+                onclick="event.preventDefault();my_modal_3.showModal()"
+              >
                 Next
               </button>
+              <!-- Modal -->
+              
+              <dialog id="my_modal_3" class="modal">
+                <div class="modal-box">
+                  <form method="dialog">
+                    <button
+                      class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
+                    >
+                      ✕
+                    </button>
+                  </form>
+                  <div class="flex flex-col justify-center items-center">
+                    <img src="./images/success.png" alt="" />
+                    <p class="text-2xl font-bold text-[#27AE60] py-6">
+                      Success
+                    </p>
+                    <p class="text-[#4A4A4A] font-medium text-center w-2/3">
+                      Thank you for Booking Our Bus Seats. We are working hard
+                      to find the best service and deals for you.
+                    </p>
+                    <p class="text-[#4A4A4A] opacity-90 pt-3">
+                      Shortly you will find a confirmation in your email.
+                    </p>
+                    <button
+                      class="btn bg-[#27AE60] text-white rounded-full px-20 mt-4"
+                    >
+                      Continue
+                    </button>
+                  </div>
+                </div>
+              </dialog>
+              <!-- Modal -->
             </form>
             <!-- Form -->
             <!-- Terms and condition -->
@@ -759,17 +810,21 @@
         <!-- Seat section -->
       </section>
     </main>
-    <footer class="bg-[#030712]" id="footer-id">
+    <footer class="bg-[#030712] py-4 md:py-0" id="footer-id">
       <section class="container mx-auto max-w-screen-xl">
         <!-- Upper -->
         <div
-          class="flex md:flex-row flex-col justify-between items-center md:pt-20 pb-10"
+          class="flex md:flex-row flex-col justify-between items-center md:pt-20 pb-10 md:gap-0 gap-4"
         >
           <div>
-            <h1 class="font-raleway text-4xl text-white font-extrabold">
+            <h1
+              class="font-raleway text-4xl text-white font-extrabold md:text-start text-center"
+            >
               P-Ticket
             </h1>
-            <p class="font-inter pt-3 text-[#FFFFFFCC] w-2/3">
+            <p
+              class="font-inter pt-3 text-[#FFFFFFCC] md:w-2/3 md:text-start text-center"
+            >
               P-Ticket is a digital platform to make your daily commuting
               better.
             </p>
@@ -786,40 +841,33 @@
         <!-- Upper -->
         <hr class="border-dashed pt-5" />
         <!-- Lower -->
-        <div class="flex justify-between pb-20">
+        <div class="flex md:flex-row flex-col justify-between pb-20">
           <p class="text-[#FFFFFFB2] font-inter">
             @all rights reserved, P-Ticket services limited.2024
           </p>
-          <ul class="flex space-x-14 items-center">
-            <li class="font-medium text-white">Terms & condition</li>
-            <li class="font-medium text-white">Return & refund policy</li>
-            <li class="font-medium text-white">Privacy policy</li>
+          <ul
+            class="flex md:flex-row flex-col md:space-x-14 md:items-center md:space-y-0 space-y-1 md:pt-0 pt-2"
+          >
+            <li class="font-medium text-white text-center md:text-start">
+              Terms & condition
+            </li>
+            <li class="font-medium text-white text-center md:text-start">
+              Return & refund policy
+            </li>
+            <li class="font-medium text-white text-center md:text-start">
+              Privacy policy
+            </li>
           </ul>
         </div>
         <!-- Lower -->
       </section>
     </footer>
     <!-- Modal -->
-    <section class="bg-[#F2F1F1] font-roboto relative min-h-screen flex justify-center items-center hidden" id="modal">
-      <div class="bg-white w-[718px] h-[481px] rounded-xl flex justify-center items-center">
-        <div class="flex flex-col justify-center items-center">
-          <img src="./images/success.png" alt="" />
-          <p class="text-2xl font-bold text-[#27AE60] py-6">Success</p>
-          <p class="text-[#4A4A4A] font-medium text-center w-2/3">
-            Thank you for Booking Our Bus Seats. We are working hard to find the
-            best service and deals for you.
-          </p>
-          <p class="text-[#4A4A4A] opacity-90 pt-3">
-            Shortly you will find a confirmation in your email.
-          </p>
-          <button class="btn bg-[#27AE60] text-white rounded-full px-20 mt-4">
-            Continue
-          </button>
-        </div>
-      </div>
-    </section>
-    <!-- Modal -->
+    <!-- Open the modal using ID.showModal() method -->
 
+    <!-- You can open the modal using ID.showModal() method -->
+
+    <!-- Modal -->
     <!-- Javascript Files -->
     <script src="./scripts/script.js"></script>
     <!-- Javascript Files -->

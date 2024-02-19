@@ -64,55 +64,57 @@ for (let i = 0; i < buttons.length; i++) {
 
     if (buttonCount == 4) {
       document.getElementById("apply-coupon-btn").removeAttribute("disabled");
-      document.getElementById('apply-coupon-btn').addEventListener('click',function(){
-        const coupon_value = document.getElementById("coupon-input").value;
-        // console.log(coupon_value)
-        if (coupon_value == "NEW15") {
-          let discount = totalPrice * 0.15;
-          const li = document.createElement("li");
-          const li2 = document.createElement("li");
-          li.innerText = "Discount";
-          li2.innerText = discount;
-          document.getElementById("discount-price").appendChild(li);
-          document.getElementById("discount-price").appendChild(li2);
-          console.log(grandTotal);
-          grandTotal = grandTotal - discount;
-          set_innertext("grand-total", grandTotal);
-          document.querySelector(".coupon-input-class").classList.add("hidden");
-        } else if (coupon_value == "Couple 20") {
-          let discount = totalPrice * 0.2;
-          const li = document.createElement("li");
-          const li2 = document.createElement("li");
-          li.innerText = "Discount";
-          li2.innerText = discount;
-          document.getElementById("discount-price").appendChild(li);
-          document.getElementById("discount-price").appendChild(li2);
-          grandTotal = grandTotal - discount;
-          set_innertext("grand-total", grandTotal);
-          document.querySelector(".coupon-input-class").classList.add("hidden");
-        }
-      })
-      
-    }
-    let phoneNumber = parseInt(document.getElementById("phn-number").value);
-
-    if (buttonCount == 1 && phoneNumber >=0) {
-      document.getElementById("next-btn").removeAttribute("disabled");
-
+      document.getElementById("apply-coupon-btn").style.backgroundColor =
+        "#1DD100";
       document
-        .getElementById("next-btn")
+        .getElementById("apply-coupon-btn")
         .addEventListener("click", function () {
-          hide_element("header-id");
-          hide_element("main-id");
-          hide_element("footer-id");
-          show_element("modal");
+          const coupon_value = document.getElementById("coupon-input").value;
+          // console.log(coupon_value)
+          if (coupon_value == "NEW15") {
+            let discount = totalPrice * 0.15;
+            const li = document.createElement("li");
+            const li2 = document.createElement("li");
+            li.innerText = "Discount";
+            li2.innerText = discount;
+            li2.classList.add("mr-[10px]");
+            document.getElementById("discount-price").appendChild(li);
+            document.getElementById("discount-price").appendChild(li2);
+            console.log(grandTotal);
+            grandTotal = grandTotal - discount;
+            set_innertext("grand-total", grandTotal);
+            document
+              .querySelector(".coupon-input-class")
+              .classList.add("hidden");
+          } else if (coupon_value == "Couple 20") {
+            let discount = totalPrice * 0.2;
+            const li = document.createElement("li");
+            const li2 = document.createElement("li");
+            li.innerText = "Discount";
+            li2.innerText = discount;
+            document.getElementById("discount-price").appendChild(li);
+            document.getElementById("discount-price").appendChild(li2);
+            grandTotal = grandTotal - discount;
+            set_innertext("grand-total", grandTotal);
+            document
+              .querySelector(".coupon-input-class")
+              .classList.add("hidden");
+          }
         });
     }
-
+    let phoneNumber = document.getElementById("phn-number");
     
+    phoneNumber.addEventListener('input',function(){
+      let phoneNumberValue=phoneNumber.value
+      if(buttonCount>=1 || phoneNumberValue.length>0){
+        document.getElementById("next-btn").removeAttribute("disabled");
+        document.getElementById("next-btn").style.backgroundColor = "#1DD100";
+      }
+    })
   });
 }
-
+let phoneNumber = document.getElementById("phn-number").value;
+console.log(phoneNumber.length)
 // Utility functions
 
 function set_innertext(elementId, value) {
@@ -141,13 +143,23 @@ function grand_total(elementId) {
 
   return element;
 }
-function hide_element(elementId){
+function hide_element(elementId) {
   const element = document.getElementById(elementId);
   element.classList.add("hidden");
-
 }
-function show_element(elementId){
+function show_element(elementId) {
   const element = document.getElementById(elementId);
   element.classList.remove("hidden");
+}
 
+
+function phone_number_length(){
+  let phoneNumber = document.getElementById("phn-number")
+  phoneNumber.addEventListener('keyup',function(){
+    let phoneNumberValue = phoneNumber.value;
+    let phone_number_trim=phoneNumberValue.split('').join('')
+    let c=phone_number_trim.length
+    return c
+  })
+  
 }

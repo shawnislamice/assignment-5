@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="myInput">
+    <button>Click</button>
+    <script>
+        // Select the input field
+        const inputField = document.getElementById('myInput');
+
+        // Add an event listener to the input field to listen for changes
+        inputField.addEventListener('input', function() {
+            // Retrieve the current value of the input field
+            const inputValue = inputField.value;
+
+            // Log the current value to the console
+            console.log('Input value:', inputValue);
+        });
+    </script>
+</body>
+</html>
