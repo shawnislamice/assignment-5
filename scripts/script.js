@@ -172,3 +172,7 @@ function phone_number_length() {
     return c;
   });
 }
+
+document.getElementById("continue-btn").addEventListener('click',function(){
+  window.location.reload()
+})
