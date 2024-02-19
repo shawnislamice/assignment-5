@@ -92,6 +92,7 @@ for (let i = 0; i < buttons.length; i++) {
             const li2 = document.createElement("li");
             li.innerText = "Discount";
             li2.innerText = discount;
+            li2.classList.add("mr-[10px]");
             document.getElementById("discount-price").appendChild(li);
             document.getElementById("discount-price").appendChild(li2);
             grandTotal = grandTotal - discount;
